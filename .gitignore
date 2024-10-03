@@ -1,0 +1,17 @@
+*terraform.tf*
+*terraform.tfstate
+*.terraform
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Ignore transient lock info files created by terraform apply
+.terraform.tfstate.lock.info
+# Ignore CLI configuration files
+.terraform.rc
+terraform.rc
+/dev*/app*/terraform/.terraform
+app-of-apps/terraform/terraform.tfstate

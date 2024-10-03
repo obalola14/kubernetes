@@ -13,3 +13,9 @@ spec:
     path: apps
     repoURL: https://github.com/philcz16/app-of-apps
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
