@@ -1,0 +1,43 @@
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: harbor-cert
+  namespace: harbor
+spec:
+  dnsNames:
+    - harbor.demo.waaron.org
+  secretName: harbor-tls
+  issuerRef:
+    name: letsencrypt-issuer
+    kind: ClusterIssuer
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: argocd-cert
+  namespace: argocd
+spec:
+  dnsNames:
+    - argocd.demo.waaron.org
+  secretName: argocd-tls
+  issuerRef:
+    name: letsencrypt-issuer
+    kind: ClusterIssuer
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: keycloak-cert
+  namespace: keycloak
+spec:
+  dnsNames:
+    - keycloak.demo.waaron.org
+  secretName: keycloak-tls
+  issuerRef:
+    name: letsencrypt-issuer
+    kind: ClusterIssuer

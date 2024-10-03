@@ -1,0 +1,17 @@
+global:
+  domain: argocd.demo.waaron.org
+
+server:
+  ingress:
+    enabled: true
+    ingressClassName: "nginx"
+    hostname: "argocd.demo.waaron.org"
+    tls: false
+    extraTls:
+    - hosts:
+      - argocd.demo.waaron.org
+      secretName: argocd-tls
+    annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+
+
